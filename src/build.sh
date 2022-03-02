@@ -11,3 +11,10 @@ v -prod doc2txt.v -os windows -o ../bin/windows/doc2txt
 
 echo "building xerdump (windows)..."
 v -prod txt2nlp.v -os windows -o ../bin/windows/txt2nlp
+
+echo "zipping windows..."
+zip -r ../bin/doctools_windows.zip ../bin/windows
+
+echo "zipping linux..."
+zip -r ../bin/doctools_linux.zip ../bin/linux
+
