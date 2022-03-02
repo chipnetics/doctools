@@ -27,15 +27,11 @@ Any of these replacements will not affect the original meaning of the document h
 
 # Pre-Compiled Binaries
 
-Binaries for Windows and Linux have been pre-compiled and can be found in the 'bin' folder. Or in the "Releases" section in GitHub.
-
-With git, you can download all the latest source and binaries with `git clone https://github.com/chipnetics/doctools`
-
-Alternatively, if you don't have git installed:
+Binaries for Windows and Linux have been pre-compiled and can be found in the "Releases" section in GitHub.
 
 1. Download the latest release [here](https://github.com/chipnetics/doctools/releases)
 2. Unzip to a local directory.
-3. Navigate to 'bin' directory for executables.
+3. Navigate to directory for executables in Windows and Linux.
 
 # Compiling from Source
 
