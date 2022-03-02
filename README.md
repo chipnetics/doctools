@@ -1,9 +1,9 @@
 # Doctools - Document Analytics
 
-Doctools are a collection of utilities for extracting plain text from proprietary Microsoft Doc/Docx files; such that the resulting .txt can be used for.
+Doctools are a collection of utilities for extracting plain-text from proprietary Microsoft Doc/Docx files; such that the resulting plain-text output can be used for.
 
 * Diff operations (finding what has changed) - useful when tracking was not turned on in Word.
-* Grepping key words; joining with other data sets 
+* Grepping / regex; and joining with other data sets 
 * Natural language processing - for instance, text sentiment analysis.
 * Verb / adjective / noun classification.
 * General analytics such as word counts, longest sentence, etc.
@@ -12,22 +12,22 @@ This utility can be ran manually, or integrated into an automated-process/work-f
 
 # Project Motivation
 
-There are a plethora of solutions for converting MS Doc/Docx to Txt - however when you remove all those that are GUI based, remove installer-based solutions, remove non-compiled solutions (i.e. Python script), and remove (slow) COM-based solutions; the list suddenly is very small.  Compounded further that the remaining solutions are either Windows or Linux utilities; *but  not both*.
+There are a plethora of solutions for converting MS Doc/Docx to plain-text - however when you remove all those that are GUI based, remove installer-based solutions, remove non-compiled solutions (i.e. Python script), and remove (slow) COM-based solutions; the list suddenly is very small.  Compounded further that the remaining solutions are either Windows or Linux utilities; *but  not both*.
 
-Finally, for the remaining few solutions that may exist, they generally don't prep the data for natural language processing or text analytics.  Alas, this solution is also **very fast** as it directly extracts the underlying XML from the document and uses a multitude of regular expressions to prepare the resulting txt file for anlaytics.
+Finally, for the remaining few solutions that may exist, they generally don't prepare the data for natural language processing or text analytics.  Alas, this solution is also **very fast** as it directly extracts the underlying XML from the document and uses a multitude of regular expressions to clean & prepare the resulting text file for anlaytics.
 
 # Work in Progress
 
-This repository is generally work in progress.  While it functions there is room for improvement.  Currently is what this is **not** is a 1:1 Doc/Docx to Txt converter.  In particular, the data is transformed such that each sentence is extracted onto a separate line break so that it can be used in analytics with incredible ease.  
+This repository is generally work in progress.  While it functions there is room for improvement.  Currently is what this is **not** is a 1:1 Doc/Docx to plain-text converter.  In particular, the data is transformed such that each sentence is extracted onto a separate line break so that it can be used in analytics with *incredible ease*.  
 
-Some basic string replacement takes place to facilitate this clearly in a way that won't confuse NLP engines (such as Google Cloud). One example is that, ellipsis (...) will be replaced with ("such as,").  This is done as some 3rd party tools will (/may) mistake this for sentence breaks. Other examples are "etc.", or roman numeral bullets (iii., iv., v.).
+Some basic string replacement takes place to facilitate this clearly in a way that won't confuse NLP engines (such as Google Cloud). One example is that ellipsis (...) will be replaced with ("such as,").  This is done as some 3rd party tools will (/may) mistake this for sentence breaks. Other immediate examples are "etc.", or roman numeral bullets (iii., iv., v.).
 
 Any of these replacements will not affect the original meaning of the document however.
 
 
 # Pre-Compiled Binaries
 
-Binaries (.exe) for Windows and Linux have been pre-compiled and can be found in the 'bin' folder. Or in the "Releases" section in GitHub.
+Binaries for Windows and Linux have been pre-compiled and can be found in the 'bin' folder. Or in the "Releases" section in GitHub.
 
 With git, you can download all the latest source and binaries with `git clone https://github.com/chipnetics/doctools`
 
@@ -115,9 +115,9 @@ Options:
   --version                 output version information and exit
 ```
 
-Windows: `txt2nlp.exe -f casestudy.txt -k key.txt > casestudy_NLP.txt`
+Windows: `txt2nlp.exe -f casestudy.txt -k key.txt > casestudy_sentiment.txt`
 
-Linux: `./txt2nlp -f ../test/casestudy.docx -k key.txt > casestudy_NLP.txt`
+Linux: `./txt2nlp -f casestudy.txt -k key.txt > casestudy_sentiment.txt`
 
 *Sample output:*
 
