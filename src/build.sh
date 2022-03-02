@@ -7,13 +7,13 @@ echo "building txt2nlp (linux)..."
 v -prod txt2nlp.v -o ../bin/linux/txt2nlp
 
 echo "building doc2txt (windows)..."
-v -prod doc2txt.v -os windows -o ../bin/windows/doc2txt
+v -prod doc2txt.v -os windows -o ../bin/windows_mingw/doc2txt
 
-echo "building xerdump (windows)..."
-v -prod txt2nlp.v -os windows -o ../bin/windows/txt2nlp
+echo "building txt2nlp (windows)..."
+v -prod txt2nlp.v -os windows -o ../bin/windows_mingw/txt2nlp
 
 echo "zipping windows..."
-zip -r ../bin/doctools_windows.zip ../bin/windows
+zip -r ../bin/doctools_windows_mingw.zip ../bin/windows_mingw
 
 echo "zipping linux..."
 zip -r ../bin/doctools_linux.zip ../bin/linux
