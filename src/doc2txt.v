@@ -23,7 +23,7 @@ fn main()
 								'specify the .docx file for parsing')
 										
 	additional_args := fp.finalize() or {
-        eprintln(err)
+        eprintln(err)	
         println(fp.usage())
         return
     }
