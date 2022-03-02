@@ -3,3 +3,4 @@ src/*.xer
 src/*.exe
 src/*.txt
 src/*.bat
+bin/*
